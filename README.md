@@ -26,10 +26,10 @@ TODO: Express
 ## Usage
 TODO: By this PUC project User can understand the flow of File uploading, save into database and allow not allow the access of upload file. 
 ## Contributing
-## DB_URL=Database String
-## PORT=process.env.PORT
-## SECRET_KEY=Should be String
-## JWT_EXPIRES_IN=Should be in hours
+## DB_URL=`${DB_URL}`
+## PORT=`${port}`
+## SECRET_KEY=`${string}`
+## JWT_EXPIRES_IN=`${hours}`
 ## npm i
 ## npm start
 ## npm run dev
