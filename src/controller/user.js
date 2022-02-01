@@ -28,7 +28,7 @@ export const givePermission = async (req, res) => {
   };
 };
 
-export const userTruncate = async (req, res) => {
+export const userTruncate = async (res) => {
   try {
     await userModel.remove({});
     return successHandler(res, 200, allConstants.RECORD_TRUNCATED);
