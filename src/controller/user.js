@@ -17,16 +17,6 @@ export const userListing = async (req, res) => {
     };
 };
 
-export const userTruncate = async (req, res) => {
-  try {
-    await userModel.remove({});
-    return successHandler(res, 200, allConstants.RECORD_TRUNCATED);
-  } catch (error) {
-    console.log(error);
-    return errorHandler(res, 500, allConstants.ERR_MSG);
-  };
-};
-
 export const givePermission = async (req, res) => {
   try {
     const {_id} = req.userData;
@@ -35,6 +25,16 @@ export const givePermission = async (req, res) => {
   } catch (error) {
     console.log(error);
     return errorHandler(res, 500, allConstants.ERR_MSG);
-  }
+  };
+};
+
+export const userTruncate = async (req, res) => {
+  try {
+    await userModel.remove({});
+    return successHandler(res, 200, allConstants.RECORD_TRUNCATED);
+  } catch (error) {
+    console.log(error);
+    return errorHandler(res, 500, allConstants.ERR_MSG);
+  };
 };
 
