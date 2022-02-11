@@ -6,7 +6,8 @@ import jwt from 'jsonwebtoken';
 
 export const addUser = async (req, res) => {
     try {
-        req.body.password = await bcrypt.hash(req.body.password, allConstants.ROUND);
+        let salt = bcrypt.genSaltSync(10);
+        req.body.password = await bcrypt.hash(req.body.password, salt);
         const user = await new userModel(req.body);
         await user.save();
         return successHandler(res, 201, allConstants.SIGNUP_SUCCESS_MSG);

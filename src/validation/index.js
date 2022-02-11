@@ -1,5 +1,5 @@
 module.exports = {
-    userValidRule: require('./userValidRule'),
+    signupValid: require('./signupvalidation'),
     valid: require('./valid'),
     filePermissionRule: require('./filePermissionValidRule'),
     // fileValidRule: require('./fileValidRule')
